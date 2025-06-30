@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Rvisual – Rvisualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-991b1886d3c685c7aa2b62b80640c7af.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Rvisualization</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Anasayfa</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Rvisual</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="verilerin-görselleştirilmesi" class="level1">
+<h1>Verilerin Görselleştirilmesi</h1>
+<section id="tarihçe" class="level2">
+<h2 class="anchored" data-anchor-id="tarihçe">Tarihçe</h2>
+<p>Veri görselleştirme yöntemleri yüzyıllardır kullanılmaktadır. 18. yy’da yaşamış olan İskoç mühendis William Playfair çubuk grafik, çizgi grafikk ve pasta grafiklerin öncüsü olmuştur. 19. yüzyılda da Florence Nightingale savaş zamanlarındaki sağlık koşullarını göstermek için “gül diyagramı”nı kullanmıştır.</p>
+<p>20.nci yüzyılda ise bilgisayarlar gelişmiş ve veri görselleştirme hızlı bir ilerleme kaydetmiştir. 21. yüzyılda iseinteraktif görseller, büyük veri, yapay zeka ile birlikte bu alan daha önemli hale gelmiştir.</p>
+</section>
+<section id="neden-önemlidir" class="level2">
+<h2 class="anchored" data-anchor-id="neden-önemlidir">Neden Önemlidir?</h2>
+<ul>
+<li><p>Sayısal veriler arasındaki ilişkilerin fark edilmesini,</p></li>
+<li><p>Eğilimlerin, örüntülerin ve aykırı değerlerin tespitini kolaylaştırmaktadır.</p></li>
+<li><p>Bir veri kümesinin en kullanışlı bilgilerinin vurgulanmasını sağlamaktadır.</p></li>
+</ul>
+</section>
+<section id="hangi-veri-ile-hangi-tip-grafik-kullanılır" class="level2">
+<h2 class="anchored" data-anchor-id="hangi-veri-ile-hangi-tip-grafik-kullanılır">Hangi Veri ile Hangi Tip Grafik Kullanılır?</h2>
+<p>Veri türleri ile kullanılacak grafik tipi arasında doğrudan bir ilişki bulunmaktadır. Veri yapısına veya analiz amacına göre grafik türü seçilmesi önem taşımaktadır. Aşağıda yaygın veri türleri ve uygun grafik türleri özetlenmektedir.</p>
+<section id="kategorik-veriler-nitel-veriler" class="level3">
+<h3 class="anchored" data-anchor-id="kategorik-veriler-nitel-veriler">Kategorik Veriler (Nitel Veriler)</h3>
+<p>Kategorik veriler, sınıflandırmalar veya etiketlerden oluşmaktadır. Örneğin; cinsiyet, renk, şehir, vb.</p>
+<p>Bu verilere uygun olan grafikler,</p>
+<ul>
+<li><p>Çubuk Grafik (Barplot)</p></li>
+<li><p>Pasta Grafik (Pie Chart)</p></li>
+</ul>
+</section>
+<section id="sayısal-veriler-nicel-veriler" class="level3">
+<h3 class="anchored" data-anchor-id="sayısal-veriler-nicel-veriler">Sayısal Veriler (Nicel Veriler)</h3>
+<p>Bu veriler ölçülebilir değerlerdir. Örneğin; gelir, yaş, ağırlık, sıcaklık vb.</p>
+<p>Bu verilere uygun olan grafikler;</p>
+<ul>
+<li><p>Histogram</p></li>
+<li><p>Kutu Grafiği (Boxplot)</p></li>
+</ul>
+</section>
+<section id="iki-sayısal-değişken-arasındaki-ilişki" class="level3">
+<h3 class="anchored" data-anchor-id="iki-sayısal-değişken-arasındaki-ilişki">İki Sayısal Değişken Arasındaki İlişki</h3>
+<p>İki nicel değişkenin arasındaki ilişki incelenmek istendiğinde kullanılmaktadır.</p>
+<p>Uygun Grafik;</p>
+<ul>
+<li>Dağılım Grafiği (Scatter Plot)</li>
+</ul>
+</section>
+<section id="zamana-bağlı-veriler-zaman-serileri" class="level3">
+<h3 class="anchored" data-anchor-id="zamana-bağlı-veriler-zaman-serileri">Zamana Bağlı Veriler (Zaman Serileri)</h3>
+<p>Zaman içinde değişen veriler için kullanılmakatdır.</p>
+<p>Uygun Grafik;</p>
+<ul>
+<li>Çizgi Grafiği (Line Chart)</li>
+</ul>
+</section>
+<section id="grafik---veri-türü-eşleşmeleri" class="level3">
+<h3 class="anchored" data-anchor-id="grafik---veri-türü-eşleşmeleri">Grafik - Veri Türü Eşleşmeleri</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "LC_COLLATE=Turkish_Türkiye.1254;LC_CTYPE=Turkish_Türkiye.1254;LC_MONETARY=Turkish_Türkiye.1254;LC_NUMERIC=C;LC_TIME=Turkish_Türkiye.1254"</code></pre>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Hangi Tur Veri ile Ne Tip Gorsel Kullanilir?</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 23%">
+<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Grafik_Turu</th>
+<th style="text-align: left;">Kullanilan_Degiskenler</th>
+<th style="text-align: left;">Veri_Turu</th>
+<th style="text-align: left;">Degisken_Sayisi</th>
+<th style="text-align: left;">Aciklama</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Histogram</td>
+<td style="text-align: left;">yas veya gelir</td>
+<td style="text-align: left;">Surekli (sayısal)</td>
+<td style="text-align: left;">Tek degiskenli</td>
+<td style="text-align: left;">Surekli bir degisenin dagilimini gosterir</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cubuk Grafik</td>
+<td style="text-align: left;">cinsiyet, sehir, calisiyor</td>
+<td style="text-align: left;">Kesikli / Kategorik</td>
+<td style="text-align: left;">Tek degiskenli</td>
+<td style="text-align: left;">Kategorik degiskenin frekans dagilimi</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pasta Grafigi</td>
+<td style="text-align: left;">cinsiyet, sehir</td>
+<td style="text-align: left;">Kategorik</td>
+<td style="text-align: left;">Tek degiskenli</td>
+<td style="text-align: left;">Gruplarin oransal dagilimi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kutu Grafigi</td>
+<td style="text-align: left;">gelir ~ cinsiyet veya gelir ~ sehir</td>
+<td style="text-align: left;">Sayisal + Kategorik</td>
+<td style="text-align: left;">İki degiskenli</td>
+<td style="text-align: left;">Gruplara gore dagilim ve aykiri degerler</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nokta Grafigi</td>
+<td style="text-align: left;">yas ve gelir</td>
+<td style="text-align: left;">Sürekli (iki sayisal degisken)</td>
+<td style="text-align: left;">İki degiskenli</td>
+<td style="text-align: left;">Degiskenler arasi iliskiyi gosterir</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Çizgi Grafigi</td>
+<td style="text-align: left;">ay (zaman) ve gelir</td>
+<td style="text-align: left;">Zaman (kesikli) + Sayisal</td>
+<td style="text-align: left;">İki degiskenli</td>
+<td style="text-align: left;">Zamana bagli degisim</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Facet (Alt grafik)</td>
+<td style="text-align: left;">gelir ~ yas, facet_wrap(~ sehir)</td>
+<td style="text-align: left;">Sayisal + Kategorik (alt grafik icin)</td>
+<td style="text-align: left;">Cok degiskenli</td>
+<td style="text-align: left;">Her kategori icin ayri grafikler</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="eksenler-ve-etiketler" class="level2">
+<h2 class="anchored" data-anchor-id="eksenler-ve-etiketler">Eksenler ve Etiketler</h2>
+<p>Veriler görselleştrilirken oluşturulan grafiğin doğru anlaşılabilmesi amacıyla <strong>eksenler</strong> (x ve y) ve bu eksenlere ait <strong>etiketler</strong> (açıklayıcı metinler) büyük önem taşımaktadır.</p>
+<p><strong>Eksenler:</strong> veri değerlerinin nerede konumlandığını gösterirken</p>
+<p><strong>Etiketler:</strong> neyin neye karşı çizildiğini anlatmaktadır</p>
+<p>X ekseninde genellikle bağımsız değişken yer alır. Bağımsız değişken bir deneye veya analizde diğer değişkenleri etkilediği düşünülen, araştırmacı tarafından kontrol /manipüle edilen değişkendir. Daha basit bir şekilde ifade etmek gerekirse “neden” ya da “etki yaratan” değişken denilebilir..</p>
+<p>Y ekseninde isew genellikle bağımlı değişken bulunmaktadır. Bağımlı değişken bir deney/analizde bağımsız değişkenin etkisi ile değiştiği düşünülen ve ölçülen değişkendir. Basitçe “sonuç”, ya da “etkilenen” değişken olarak görülebilir.</p>
+<p><strong>Örneğin</strong> sulama miktarının bir bitkinin büyüme hızına etkisi araştırılıyorsa;</p>
+<ul>
+<li><p><em>Bağımsız Değişken:</em> Sulama miktarı (örn; 500ml, 1000ml)</p></li>
+<li><p><em>Bağımlı Değişken:</em> Bitkinin büyüme hızı (örn: günlük 3mm, aylık 4 cm)</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Öneriler:</em></strong></p>
+<ol type="1">
+<li>Etiketlerde Gelir (TL), Sıcaklık (°C) gibi birimlerin belirtilmesi anlamayı kolaylaştırmaktadır.</li>
+<li>Eksensiz veya etiketsiz grafikler, görsel oluşsa da <strong>anlamsız</strong> olabilmektedir.</li>
+<li>Grafik başlığı olmadan verilen mesaj eksik kalabilmektedir.</li>
+</ol>
+</section>
+<section id="base-r-ile-verilerin-görselleştirilmesi" class="level2">
+<h2 class="anchored" data-anchor-id="base-r-ile-verilerin-görselleştirilmesi">Base R ile Verilerin Görselleştirilmesi</h2>
+<p>Ölçüm, sayım, deney, gözlem ya da araştırma yolu ile elde edilen nitel ve nicel verilerden oluşan veri setlerinin anlaşılması ve yorumlanmasında veri görselleştirmesi yöntemleri kullanılmaktadır. Veri görselleştirmesi grafik, tablo, harita gibi yöntemlerin kulanılması yolu ile verilerin yorumlanmasını kolaylaştırmayı sağlamaktadır. Görselleştirme hem analizlerin daha estetik görünmesini sağlamaktadır hem de verilerin hızlı anlaşılmasını sağlayarak keşif, ve karar alma süreçlerini kolaylaştırmaktadır.</p>
+</section>
+<section id="örnek-veri-seti-ile-grafik-türlerinin-uygulanması" class="level2">
+<h2 class="anchored" data-anchor-id="örnek-veri-seti-ile-grafik-türlerinin-uygulanması">Örnek Veri Seti ile Grafik Türlerinin Uygulanması</h2>
+<p>Bu bölümde gerçek hayatta karşılaşabileceğimiz türden, yapay bir veri seti olan gelir_calisma kullanılarak farklı grafik türlerinin nasıl oluşturulduğu gösterilecektir. Veri setinin R’a yüklenmesi için gerekli kodlar aşağıda verilmektedir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"gelir_calisma.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># veri</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(veri) <span class="co"># veri setinin ilk 5 satırını göstermek için kullanılmıştır. yalnızca veri yazılarak çalıştırılsaydı, R tüm veri setini gösterebilirdi. Burada veri yapısını kısaca görmek amacıyla kullnaılmıştır head fonksiyonu.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   isim yas    gelir calisma_durumu cinsiyet
+1 kisi1  44 50020.54           TRUE    Kadin
+2 kisi2  27 39433.33          FALSE    Diger
+3 kisi3  65 36008.41           TRUE    Diger
+4 kisi4  40 59950.67          FALSE    Diger
+5 kisi5  62 69623.51          FALSE    Erkek
+6 kisi6  37 54824.39          FALSE    Diger</code></pre>
+</div>
+</div>
+<p>Görüldüğü gibi, veri setinde farklı değişken türleri bulunmaktadır.</p>
+<ul>
+<li><p><strong><em>Sayısal değişkenler:</em></strong> yas, gelir</p></li>
+<li><p><strong><em>Kategorik değişkenler:</em></strong> cinsiyet, calisma_durumu</p></li>
+<li><p><strong><em>ID niteliği taşıyan:</em></strong> isim</p></li>
+</ul>
+<p>Bu değişkenler, farklı türlerde veriler olup, her veri türünün kendine uygun bir grafik oluşturmada kullanılması önem taşımaktadır. Yukarıda veri tipi-grafik önerileri zaten yapılmış olup, aşağıda bu veriler ile oluşturulmuş örnek grafikler sunulmaktadır.</p>
+<section id="histogram-grafiği-oluşturulması" class="level3">
+<h3 class="anchored" data-anchor-id="histogram-grafiği-oluşturulması">1. Histogram Grafiği Oluşturulması</h3>
+<p>Histogram grafiği, sayısal (nicel) verilerin dağılımını görselleştirmek için kullanılan bir grafik türüdür. Verilerin sıklıklarını (ne kadar sık meydana geldiklerini) belirli aralıklara (bin, yüz) bölerek göstermektedir. Her bir çubuk, belirli bir değer aralığındaki veri noktalarının sayılarını temsil etmektedir.</p>
+<ul>
+<li><p>Sayısal verilerini dağılımını anlamak için,</p></li>
+<li><p>Verilerin yoğunlaştığı bölgeleri, aykırı değerleri veya eğilimleri görmek için kullanılmakatdır.</p></li>
+</ul>
+<p>Çubuk grafik, görsel olarak histogram grafiğine benzer bir grafiktir. Ancak histogramda çubuklar birbirine bitişik oluşmaktadır. Sayısal verilerin sıklık dağılımını görselleştirmektedir. R2da histogram grafiği oluşturmak için “hist” fonksiyopnu kullanılmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Yaşların Dağılımı</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(veri<span class="sc">$</span>yas,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaşların Dağılımı"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>-- Veri setindeki başka hangi değişken ile histogram grafiği oluşturulabilir?</p>
+</section>
+<section id="kutu-boxplot-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="kutu-boxplot-grafiği">2. Kutu (Boxplot) Grafiği</h3>
+<p><strong>Kutu Grafiği</strong> sayısal (nicel) verilerin dağılımını, merkezi eğilimini, yayılımını ve aykırı değerlerini görselleştirmek için kullanılan bir grafik türüdür. Verilerin istatistiksel özetini bir grafikte göstermeyi sağlar ve farklı grupların karşılaştırılmasında etkilidir.</p>
+<p>Bir kutu grafiği aşağıdaki istatistikleri özetlemektedir;</p>
+<ol type="1">
+<li>En küçük değer (minimum)</li>
+<li>Birinci çeyrek (Q1)</li>
+<li>Medyan (Q2)</li>
+<li>Üçüncü Çeyrek (Q3)</li>
+<li>En büyük değer (maksimum)</li>
+</ol>
+<p>R’da boxplot grafiği oluşturmak için “boxplot” fonksiyonu kullanılmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(veri<span class="sc">$</span>gelir,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Gelir Dağılımı"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">"salmon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Not:</strong> grafikteki alt çizgi min, kutunun alt sınırı q1, ortadaki siyah çizgi medyan, kutunun üst sınırı q3, üst çizgi max değeri ifade etmektedir.</p>
+<p>Histogram grafiği verilierin sıklık dağılımını gösterir, grupları karşılaştırmak zordur. Ancak boxplot verilerin özet istatistiklerini gösterir ve grupları karşılaştırmak içn daha uygundur. Eğer veride aykırı bir değer bulunursa aykırı değerleri temsil eden noktalar oluşmaktadır.</p>
+<p>Grupların karşılaştırılmasına örnek olarak ise cinsiyete göre gelir dağılımı grafiği verilebilir. Aşağıda una örnek bir grafiğin nasıl oluşturulacağı gösterilmektedir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(gelir <span class="sc">~</span> cinsiyet,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> veri,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Gore Gelir Dagilimi"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"pink"</span>, <span class="st">"lightblue"</span>, <span class="st">"gray"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="çubuk-barplot-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="çubuk-barplot-grafiği">3. Çubuk (Barplot) Grafiği</h3>
+<p>Genellikle kategorik verilerin görselleştirilmesinde tercih edilmektedir. Barplot adı da verilen çubuk grafiği her bir kategori için bir çubuk çizmektedir ve çubukların yüksekliği, o kategoriye karşılık gelen değerin büyüklüğünü temsil etmektedir.</p>
+<p><strong>Çubuk Grafiğin Özellikleri:</strong></p>
+<ol type="1">
+<li>X - Ekseni kategorik verileri göstermektedir. (örn: şehirler, gruplar)</li>
+<li>Y - Ekseni her kategoriye ait sayısal değeri göstermektedir. (frekans, toplam, ortalama vb)</li>
+<li>Çubuklar histogramdan farklı şşekilde aralıklı oluşmaktadır.</li>
+<li>Kategorik verilerin karşılaştırılmasını kolaylaştırmayı amaçlamaktadır.</li>
+</ol>
+<p>R’da çubuk grafiği çizmek için “barplot” fonksiyonu kullanılmaktadır.</p>
+<p>Aşağıda Cinsiyete Göre kişi sayısını gösteren çubuk grafiğin oluşturulmasına yönelik kodlar bulunmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>table_cinsiyet <span class="ot">&lt;-</span> <span class="fu">table</span>(veri<span class="sc">$</span>cinsiyet) <span class="co"># bu fonksiyon her kategoride kaç gözlem olduğunu saymaktadır.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_cinsiyet,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"pink"</span>, <span class="st">"skyblue"</span>, <span class="st">"lightgray"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Cinsiyet"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="dağılım-grafiği-scatter-plot" class="level3">
+<h3 class="anchored" data-anchor-id="dağılım-grafiği-scatter-plot">4. Dağılım Grafiği (Scatter Plot)</h3>
+<p>Dağılım grafiği iki nicel değişken arasındaki ilişkiyi ve yayılımı analiz etmek için kullanılan bir analiz türüdür. X ekseni bağımsız değişkeni Y ekseni ise bağımlı değişkeni temsişl etmektedir. Her veri noktası bu iki değişken in bir kombinasyonunu göstermektedir. Bu grafikler eğilimleri (pozitif ya da negatif korelasyon) ve aykırı değerleri tespit etmek için idealdir.</p>
+<p>Aşağıda veri setinde bulunan yaş ve gelir verilerinin arasındaki ilişkiyi gösterir scatter plot örneği bulunmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(veri<span class="sc">$</span>yas, veri<span class="sc">$</span>gelir,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="ggplot2-ile-verilerin-görselleştirilmesi" class="level1">
+<h1>ggplot2 ile Verilerin Görselleştirilmesi</h1>
+<section id="grammer-of-graphics-grafik-dili" class="level2">
+<h2 class="anchored" data-anchor-id="grammer-of-graphics-grafik-dili">Grammer of Graphics (Grafik Dili)</h2>
+<p>Grafik Dili (Grammer of Graphics) veri görselleştirmesini sistematik ve modüler şekilde tanımlayan bir kavramsal çerçeve olup ilk olarak 1999 yılında Leland Wikinson tarafından yayınlanan <em>The Grammer of Graphics</em> kitabında tanıtılmıştır. ggplot2 gibi modern veri görselleştirme araşlarının temelini oluşturmaktadırç</p>
+<section id="temel-kavramlar" class="level3">
+<h3 class="anchored" data-anchor-id="temel-kavramlar">Temel Kavramlar</h3>
+<p>Grafik dili bir grafiği oluşturan temel bileşenleri bir “dil” gibi ele almaktadır. Bu bileşenler aşağıda sıralanmaktadır;</p>
+<p><strong>1. Veri (Data):</strong> Görselleştirilecek ham verilerdir. (data = veri)</p>
+<p><strong>2. Değişken Atamaları (Mappings):</strong> Verinin grafik öğelerinin nasıl eşleneceğini tanımlamaktadır. (x - ekseni, y - ekseni, renk vb.) (aes(x = yaş, y = gelir, color = şehir) ile yaş x-eksenine, gelir y-eksenine, şehir ise renge atanır.)</p>
+<p><strong>3. Geometrik Nesneler (Geoms):</strong> Veriyi görselleştirmek için kullanılan şekiller( örneğin çubuklar, noktalar, çizgiler) (geom_point() dağılım grafiği, geom_line() çizgi grafiği oluşturur.) Mappings veriyi nasıl görsel olarak temsik edeceğini belirlerken geoms görselleştirmenin “şeklini” oluşturmaktadır.</p>
+<p><strong>4. Estetik Özellikler:</strong> Görsel özellikleri ( renk, boyut, şekil) belirler ve değişkenlerle ilişkilendirir. ( örneğin bir değişkeni renge bağlayarak farklı kategorileri ayırt etmeyi sağlar. aes(color = sehir) yazılırsa her şehir farklı renkte gösterilebilmektedir.)</p>
+<p><strong>5. İstatistiksel Dönüşümler (Stats):</strong> Veriye uygulanan özetlemeler veya dönüşümler (örn; ortalama, yoğunluık tahmini) ( stat_summary() ile ehr grup için ortalama hesaplanabilmektedir. Verinin ham haliyle kullanılması yerine, stats veriyi özetleyerek dönüştürmektedir. Örneğin histogramda yoğunluk tahmini gibi işlemleri içermektedir.</p>
+<p><strong>6. Koordinat Sistemi (Coordinates):</strong> Verinin nasıl düzenleneceğini tanımlamaktadır (kartezyen, polar en sık kullanılanlardır.)</p>
+<p>Kartezyen koordinat sistemi: X ve Y eksenlerinin dik açılarla kesiştiği geleneksel koordinat sistemi olup; dağılım,,çubuk gibi pek çok grafik bu sistemi kullanmaktadır. coord_cartesian()</p>
+<p>Polar koordinat sistemi: dairesel bir düzenleme kullanmaktadır. mesafe (R) ve açı (θ) ile veri temsil edilmektedir. Pasta ya da radar grafikler bu sistemle oluşturulmaktadır. coord_polar()</p>
+<p><strong>7. Fasetleme (Facets):</strong> Veriyi alt gruplara bölerek biren fazla grafik oluşturmaktadır. facet_wrap(~şehir) ile her şehir için ayrı bir grafik oluşturulur.</p>
+<p><strong>8. Tema ve Düzen (Themes):</strong> Görsel ve stil etiketleri özelleştirir. Font, arka plan, etiketler gibi görsel stilleri ve düzeni özelleştirmektedir. theme_minimal()</p>
+<p><strong>9. Etiketler:</strong> Başlık eksen adı ve açıklamaların atanmasını sağlamaktadır. labs(title = “Yaş ve Gelir İlişkisi”, x = “Yaş”, y = “Gelir (TL)”) gibi.</p>
+<p>theme_minimal()</p>
+<p>Bu bileşenler birbiriyle katmanlar halinde birleşerek grafiği oluşturmaktadır.</p>
+</section>
+</section>
+<section id="ggplot2-ile-örnek-grafikler" class="level2">
+<h2 class="anchored" data-anchor-id="ggplot2-ile-örnek-grafikler">ggplot2 ile Örnek Grafikler</h2>
+<p>Grafiklerin oluşturulabilmesi için öncelikle verinin içeri aktarılması gerekmektedir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)   <span class="co"># Grafikler için</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"ggplotverisi.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Yukarıdaki şekilde veri içeri aktarıldıktan ve ggplot2 paketi çağırıldıktan sonra çeşitli grafiklerin oluşturulması mümkün olmaktadır.</p>
+<section id="histogram-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="histogram-grafiği">1.Histogram Grafiği</h3>
+<p>Aşağıda yaş dağılımını gösteren histogram grafiği oluşturulmaktadır. <strong>ggplot(data, aes(x = yas))</strong> kısmı veri seti içinden yas değişkenini X eksenine eşleştirmektedir.</p>
+<p><strong>geom_histogram(bindwidth = 5):</strong> 5 yaş aralıklı histogram çizmektedir.</p>
+<p><strong>fill = “skyblue”</strong> çubukların iç rengini belirlemektedir.</p>
+<p><strong>color = “black”</strong> çubukların kenar çizgisini siyah yapmaktadır.</p>
+<p><strong>labs(…)</strong> kısmı başlık x ve y eksenlerini tanımlamaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"skyblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik veri setindeki bireylerin yaşları nasıl dağılmış, hangi yaş grubu daha sık sorularına cevap vermektedir.</p>
+<p>Histogram grafiğine yoğunluk eğrisi eklenmesi de mümkün olmaktadır. Bu aşağıdaki kkodlar ile gerçekleştirilebilmektedir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..),    <span class="co"># Histogram yogunluk (density) olceginde</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">5</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"skyblue"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>  <span class="co"># Yogunluk eğrisi</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yas Dagılımı ve Yogunluk Egrisi"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yas"</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Yogunluk"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+i Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
+i Please use `after_stat(density)` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="çubuk-grafik" class="level3">
+<h3 class="anchored" data-anchor-id="çubuk-grafik">2. Çubuk Grafik</h3>
+<p>Aşağıda cinsiyete göre kişi sayısını gösteren çubuk grafik oluşturulmaktadır.</p>
+<p><strong>aes(x = cinsiyet)</strong> ile kategorik bir değişken olan cinsiyet x eksenine yerleştirilmektedir.</p>
+<p><strong>geom_bar():</strong> her cinsiyet içi otomati olarak kisi sayısını (frekansı) sayarak çubuk olarak göstermektedir.</p>
+<p><strong>fill = “orange”</strong> çubukların içini turuncu yapmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet)) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik veri setinde kaç kadın kaç erkek bulunduğu sorusunu cevaplamaktadır.</p>
+</section>
+<section id="kutu-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="kutu-grafiği">3. Kutu Grafiği</h3>
+<p>Aşağıda cinsiyete göre geliri gösteren kutu grafiği oluşturma adımları gösterilmektedir.</p>
+<p><strong>(aes(x = cinsiyet, y= gelir):</strong> x ekseninde cinsiyeti gösteren gruplar, y ekseninde ölçülen değer (gelir) konumlandırılmaktadır.</p>
+<p><strong>geom_boxplot():</strong> her grup için minimum, 1. çeyrek, medyan, 3. çeyrek ve maksimum değerleri göstermektedir.</p>
+<p><strong>fill = “lightgreen”</strong> kutunun renginin açık yeşil olmasını sağlamaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Gelir Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik kadın ve erkekler arasında gelir farkı olup olmadığını ortaya koymakta ve varsa aykırı değerleri göstermektedir.</p>
+</section>
+<section id="nokta-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="nokta-grafiği">4. Nokta Grafiği</h3>
+<p>Aşağıda yaş ve gelir ilişkisini ortaya koyan nokta grafiği oluşturulmaktadır.</p>
+<p><strong>aes(x = yas, y = gelir)</strong> her bireyin yaşı ve geliri koordinat sistemine yerleştirilmektedir.</p>
+<p><strong>geom_point():</strong> nokta grafiği çizmektedir.</p>
+<p><strong>alpha = 0.7:</strong> noktaların saydamlığını belirlemektedir. (0: şeffaf, 1: opak)</p>
+<p><strong>color = “purple”</strong> noktaların rengini mor yapmaktadır.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik yaş arttıkça gelir artıyor mu? Arada bir ilişki var mı sorusuna cevap vermeyi amaçlamaktadır.</p>
+<p>Bu garfiğin eğilimini göstermek için aşağıdaki kodların eklenmesi yeterli olacaktır:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span>    <span class="co"># Noktalar</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span>  <span class="co"># Eğilim çizgisi (linear model)</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi (Eğim Çizgisi ile)"</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>geom_smooth(method = “lm”</strong> ile doğrusal regresyon eğrisi çizilmektedir.</p>
+<p><strong>se = TRUE</strong> standart hata bantlarını (güven aralığı) göstermektedir.</p>
+</section>
+<section id="çizgi-grafiği" class="level3">
+<h3 class="anchored" data-anchor-id="çizgi-grafiği">5. Çizgi Grafiği</h3>
+<p>Aşağıda yıla göre ortalama geliri gösteren çizgi grafiğinin çizilmesine ilişkin örnek sunulmaktadır.</p>
+<p>Öncelikle veride bulunan gelir başlığının yıllara göre ortalamasının hesaplanması, daha sonra bu ortalamalara göre çizgi grafiğinin oluşturulması gerekmektedir.</p>
+<p><strong>group_by(ay)</strong> veriyi yıllara göre gruplamaktadır.</p>
+<p><strong>summarise()</strong> her yıl için ortalama gelir hesaplamaktadır.</p>
+<p><strong>geom_line()</strong> noktaları birleştiren çizgi grafiği çizmektedir.</p>
+<p><strong>geom_point()</strong> çizgi üzerindeki her nokta verideki alınan ortalama değeri temsil etmektedir.</p>
+<p><strong>group = 1</strong> tek bir çizgi çizeceğini belirtmektedir (ÖNEMLİ !!)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>veri_yillik <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yil) <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">ortalama_gelir =</span> <span class="fu">mean</span>(gelir, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(veri_yillik, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> ortalama_gelir)) <span class="sc">+</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">group =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>) <span class="sc">+</span>  <span class="co"># Yılları tam sayı olarak ayarla</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yıla Göre Ortalama Gelir"</span>, <span class="at">x =</span> <span class="st">"Yıl"</span>, <span class="at">y =</span> <span class="st">"Ortalama Gelir (TL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik yıl yıl ortalama gelirin nasıl değiştiğini göstermektedir.</p>
+</section>
+<section id="facet" class="level3">
+<h3 class="anchored" data-anchor-id="facet">6. Facet</h3>
+<p>Alt grafik oluşturulması için facet yöntemi kullanılmaktadır. her şehirde yaş dağılımı aynı mı? bazı şehirlerde genç nüfus baskın mı sorunlarının cevaplarına ulaşmayı kolaylaştırmaktadır.</p>
+<p><strong>facet_wrap(~ sehir)</strong> her şehir için ayrı bir küçük histogram çizmektedir. (facias)</p>
+<p><strong>bindwidth = 5</strong> 5 yaş aralıklı histogram çizmektedir.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"lightcoral"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> sehir) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Şehirlere Göre Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

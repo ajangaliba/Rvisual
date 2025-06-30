@@ -1,0 +1,10 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Rvisualization"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Anasayfa
