@@ -6,9 +6,9 @@ title: "Rvisual"
 
 ## Tarihçe
 
-Veri görselleştirme yöntemleri yüzyıllardır kullanılmaktadır. 18. yy'da yaşamış olan İskoç mühendis William Playfair çubuk grafik, çizgi grafikk ve pasta grafiklerin öncüsü olmuştur. 19. yüzyılda da Florence Nightingale savaş zamanlarındaki sağlık koşullarını göstermek için "gül diyagramı"nı kullanmıştır.
+Veri görselleştirme yöntemleri yüzyıllardır kullanılmaktadır. 18. yy'da yaşamış olan İskoç mühendis William Playfair çubuk grafik, çizgi grafik ve pasta grafiklerin öncüsü olmuştur. 19. yüzyılda da Florence Nightingale savaş zamanlarındaki sağlık koşullarını göstermek için "gül diyagramı"nı kullanmıştır.
 
-20.nci yüzyılda ise bilgisayarlar gelişmiş ve veri görselleştirme hızlı bir ilerleme kaydetmiştir. 21. yüzyılda iseinteraktif görseller, büyük veri, yapay zeka ile birlikte bu alan daha önemli hale gelmiştir.
+20.nci yüzyılda ise bilgisayarlar gelişmiş ve veri görselleştirme hızlı bir ilerleme kaydetmiştir. 21. yüzyılda ise interaktif görseller, büyük veri, yapay zeka ile birlikte bu alan daha önemli hale gelmiştir.
 
 ## Neden Önemlidir?
 
@@ -62,29 +62,29 @@ Uygun Grafik;
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library(knitr)
-Sys.setlocale("LC_ALL", "Turkish")
+invisible(Sys.setlocale("LC_ALL", "Turkish"))
 
 grafik_tablo <- data.frame(
 
-  Grafik_Turu = c("Histogram", "Cubuk Grafik", "Pasta Grafigi", "Kutu Grafigi",
+  Grafik_Turu = c("Histogram", "Çubuk Grafik", "Pasta Grafiği", "Kutu Grafiği",
 
-                  "Nokta Grafigi", "Çizgi Grafigi", "Facet (Alt grafik)"),
+                  "Nokta Grafiği", "Çizgi Grafiği", "Facet (Alt grafik)"),
 
-  Kullanilan_Degiskenler = c("yas veya gelir", 
+  Kullanilan_Degiskenler = c("yaş veya gelir", 
 
-                              "cinsiyet, sehir, calisiyor", 
+                              "cinsiyet, şehir, çalışıyor", 
 
-                              "cinsiyet, sehir", 
+                              "cinsiyet, şehir", 
 
-                              "gelir ~ cinsiyet veya gelir ~ sehir", 
+                              "gelir ~ cinsiyet veya gelir ~ şehir", 
 
-                              "yas ve gelir", 
+                              "yaş ve gelir", 
 
                               "ay (zaman) ve gelir", 
 
-                              "gelir ~ yas, facet_wrap(~ sehir)"),
+                              "gelir ~ yaş, facet_wrap(~ şehir)"),
 
-  Veri_Turu = c("Surekli (sayısal)", 
+  Veri_Turu = c("Sürekli (sayısal)", 
 
                 "Kesikli / Kategorik", 
 
@@ -92,33 +92,33 @@ grafik_tablo <- data.frame(
 
                 "Sayisal + Kategorik", 
 
-                "Sürekli (iki sayisal degisken)", 
+                "Sürekli (iki sayısal degişken)", 
 
-                "Zaman (kesikli) + Sayisal", 
+                "Zaman (kesikli) + Sayısal", 
 
-                "Sayisal + Kategorik (alt grafik icin)"),
+                "Sayısal + Kategorik (alt grafik için)"),
 
-  Degisken_Sayisi = c("Tek degiskenli", "Tek degiskenli", "Tek degiskenli", 
+  Degisken_Sayisi = c("Tek değişkenli", "Tek değişkenli", "Tek değişkenli", 
 
-                      "İki degiskenli", "İki degiskenli", "İki degiskenli", "Cok degiskenli"),
+                      "İki değişkenli", "İki değişkenli", "İki değişkenli", "Çok değişkenli"),
 
-  Aciklama = c("Surekli bir degisenin dagilimini gosterir",
+  Aciklama = c("Sürekli bir değişenin dağılımını gösterir",
 
-               "Kategorik degiskenin frekans dagilimi",
+               "Kategorik değişkenin frekans dağılımı",
 
-               "Gruplarin oransal dagilimi",
+               "Gruplarin oransal dağılımı",
 
-               "Gruplara gore dagilim ve aykiri degerler",
+               "Gruplara göre dağılım ve aykırı değerler",
 
-               "Degiskenler arasi iliskiyi gosterir",
+               "Değişkenler arası ilişkiyi gösterir",
 
-               "Zamana bagli degisim",
+               "Zamana bağlı değişim",
 
-               "Her kategori icin ayri grafikler")
+               "Her kategori için ayrı grafikler")
 
 )
 
-kable(grafik_tablo, caption = "Hangi Tur Veri ile Ne Tip Gorsel Kullanilir?")
+kable(grafik_tablo, caption = "Hangi Tür Veri ile Ne Tip Görsel Kullanılır?")
 ```
 
 ## Eksenler ve Etiketler
@@ -129,9 +129,9 @@ Veriler görselleştrilirken oluşturulan grafiğin doğru anlaşılabilmesi ama
 
 **Etiketler:** neyin neye karşı çizildiğini anlatmaktadır
 
-X ekseninde genellikle bağımsız değişken yer alır. Bağımsız değişken bir deneye veya analizde diğer değişkenleri etkilediği düşünülen, araştırmacı tarafından kontrol /manipüle edilen değişkendir. Daha basit bir şekilde ifade etmek gerekirse "neden" ya da "etki yaratan" değişken denilebilir..
+X ekseninde genellikle bağımsız değişken yer alır. Bağımsız değişken bir deneye veya analizde diğer değişkenleri etkilediği düşünülen, araştırmacı tarafından kontrol /manipüle edilen değişkendir. Daha basit bir şekilde ifade etmek gerekirse "neden" ya da "etki yaratan" değişken denilebilir.
 
-Y ekseninde isew genellikle bağımlı değişken bulunmaktadır. Bağımlı değişken bir deney/analizde bağımsız değişkenin etkisi ile değiştiği düşünülen ve ölçülen değişkendir. Basitçe "sonuç", ya da "etkilenen" değişken olarak görülebilir.
+Y ekseninde ise genellikle bağımlı değişken bulunmaktadır. Bağımlı değişken bir deney/analizde bağımsız değişkenin etkisi ile değiştiği düşünülen ve ölçülen değişkendir. Basitçe "sonuç", ya da "etkilenen" değişken olarak görülebilir.
 
 **Örneğin** sulama miktarının bir bitkinin büyüme hızına etkisi araştırılıyorsa;
 
@@ -199,7 +199,7 @@ hist(veri$yas,
      ylab = "Kişi Sayısı")
 ```
 
-Ayrıca bu histogram grafiğine yoğunluk eğrisi eklenmesi aşağıdaki şekilde mümkün olmaktadır. Burada freq = FALSE ile histogram çubuklarının yüksekliği kişi sayısını değil yoğunluğu ifade etmeye başlarken, lines(density(...)) fonksiyonu ise histogram üzerine bir yoğunluk eğrisi çizmektedir.
+Ayrıca bu histogram grafiğine yoğunluk eğrisi eklenmesi aşağıdaki şekilde mümkün olmaktadır. Burada **freq = FALSE** ile histogram çubuklarının yüksekliği kişi sayısını değil yoğunluğu ifade etmeye başlarken, **lines(density(...))** fonksiyonu ise histogram üzerine bir yoğunluk eğrisi çizmektedir.
 
 ```{r message=FALSE, warning=FALSE}
 hist(veri$yas,
@@ -240,16 +240,16 @@ boxplot(veri$gelir,
 
 **Not:** grafikteki alt çizgi min, kutunun alt sınırı q1, ortadaki siyah çizgi medyan, kutunun üst sınırı q3, üst çizgi max değeri ifade etmektedir.
 
-Histogram grafiği verilierin sıklık dağılımını gösterir, grupları karşılaştırmak zordur. Ancak boxplot verilerin özet istatistiklerini gösterir ve grupları karşılaştırmak içn daha uygundur. Eğer veride aykırı bir değer bulunursa aykırı değerleri temsil eden noktalar oluşmaktadır.
+*Histogram grafiği* verilierin sıklık dağılımını gösterir, grupları karşılaştırmak zordur. Ancak *boxplot* verilerin özet istatistiklerini gösterir ve grupları karşılaştırmak için daha uygundur. Eğer veride aykırı bir değer bulunursa aykırı değerleri temsil eden noktalar oluşmaktadır.
 
-Grupların karşılaştırılmasına örnek olarak ise cinsiyete göre gelir dağılımı grafiği verilebilir. Aşağıda una örnek bir grafiğin nasıl oluşturulacağı gösterilmektedir.
+Grupların karşılaştırılmasına örnek olarak ise cinsiyete göre gelir dağılımı grafiği verilebilir. Aşağıda buna örnek bir grafiğin nasıl oluşturulacağı gösterilmektedir.
 
 ```{r echo = TRUE}
 boxplot(gelir ~ cinsiyet,
         data = veri,
         main = "Cinsiyete Gore Gelir Dagilimi",
         ylab = "Gelir (TL)",
-        col = c("pink", "lightblue", "gray"))
+        col = c("gray", "lightblue", "pink"))
 ```
 
 ### 3. Çubuk (Barplot) Grafiği
@@ -260,7 +260,7 @@ Genellikle kategorik verilerin görselleştirilmesinde tercih edilmektedir. Barp
 
 1.  X - Ekseni kategorik verileri göstermektedir. (örn: şehirler, gruplar)
 2.  Y - Ekseni her kategoriye ait sayısal değeri göstermektedir. (frekans, toplam, ortalama vb)
-3.  Çubuklar histogramdan farklı şşekilde aralıklı oluşmaktadır.
+3.  Çubuklar histogramdan farklı şekilde aralıklı oluşmaktadır.
 4.  Kategorik verilerin karşılaştırılmasını kolaylaştırmayı amaçlamaktadır.
 
 R'da çubuk grafiği çizmek için "barplot" fonksiyonu kullanılmaktadır.
@@ -270,7 +270,7 @@ Aşağıda Cinsiyete Göre kişi sayısını gösteren çubuk grafiğin oluştur
 ```{r echo = TRUE}
 table_cinsiyet <- table(veri$cinsiyet) # bu fonksiyon her kategoride kaç gözlem olduğunu saymaktadır.
 barplot(table_cinsiyet,
-        col = c("pink", "skyblue", "lightgray"),
+        col = c("lightgray", "skyblue", "pink"),
         main = "Cinsiyete Göre Dağılım",
         xlab = "Cinsiyet",
         ylab = "Kişi Sayısı")
@@ -314,7 +314,7 @@ abline(model, col = "black", lwd = 2)
 
 ## Grammer of Graphics (Grafik Dili)
 
-Grafik Dili (Grammer of Graphics) veri görselleştirmesini sistematik ve modüler şekilde tanımlayan bir kavramsal çerçeve olup ilk olarak 1999 yılında Leland Wikinson tarafından yayınlanan *The Grammer of Graphics* kitabında tanıtılmıştır. ggplot2 gibi modern veri görselleştirme araşlarının temelini oluşturmaktadırç
+Grafik Dili (Grammer of Graphics) veri görselleştirmesini sistematik ve modüler şekilde tanımlayan bir kavramsal çerçeve olup ilk olarak 1999 yılında Leland Wikinson tarafından yayınlanan *The Grammer of Graphics* kitabında tanıtılmıştır. ggplot2 gibi modern veri görselleştirme araçlarının temelini oluşturmaktadır.
 
 ### Temel Kavramlar
 
@@ -324,23 +324,21 @@ Grafik dili bir grafiği oluşturan temel bileşenleri bir "dil" gibi ele almakt
 
 **2. Değişken Atamaları (Mappings):** Verinin grafik öğelerinin nasıl eşleneceğini tanımlamaktadır. (x - ekseni, y - ekseni, renk vb.) (aes(x = yaş, y = gelir, color = şehir) ile yaş x-eksenine, gelir y-eksenine, şehir ise renge atanır.)
 
-**3. Geometrik Nesneler (Geoms):** Veriyi görselleştirmek için kullanılan şekiller( örneğin çubuklar, noktalar, çizgiler) (geom_point() dağılım grafiği, geom_line() çizgi grafiği oluşturur.) Mappings veriyi nasıl görsel olarak temsik edeceğini belirlerken geoms görselleştirmenin "şeklini" oluşturmaktadır.
+**3. Geometrik Nesneler (Geoms):** Veriyi görselleştirmek için kullanılan şekiller( örneğin çubuklar, noktalar, çizgiler) (geom_point() dağılım grafiği, geom_line() çizgi grafiği oluşturur.) Mappings veriyi nasıl görsel olarak temsil edeceğini belirlerken geoms görselleştirmenin "şeklini" oluşturmaktadır.
 
-**4. Estetik Özellikler:** Görsel özellikleri ( renk, boyut, şekil) belirler ve değişkenlerle ilişkilendirir. ( örneğin bir değişkeni renge bağlayarak farklı kategorileri ayırt etmeyi sağlar. aes(color = sehir) yazılırsa her şehir farklı renkte gösterilebilmektedir.)
+**4. Estetik Özellikler:** Görsel özellikleri (renk, boyut, şekil) belirler ve değişkenlerle ilişkilendirir. (örneğin bir değişkeni renge bağlayarak farklı kategorileri ayırt etmeyi sağlar. aes(color = sehir) yazılırsa her şehir farklı renkte gösterilebilmektedir.)
 
-**5. İstatistiksel Dönüşümler (Stats):** Veriye uygulanan özetlemeler veya dönüşümler (örn; ortalama, yoğunluık tahmini) ( stat_summary() ile ehr grup için ortalama hesaplanabilmektedir. Verinin ham haliyle kullanılması yerine, stats veriyi özetleyerek dönüştürmektedir. Örneğin histogramda yoğunluk tahmini gibi işlemleri içermektedir.
+**5. İstatistiksel Dönüşümler (Stats):** Veriye uygulanan özetlemeler veya dönüşümler (örn; ortalama, yoğunluık tahmini) ( stat_summary() ile her grup için ortalama hesaplanabilmektedir. Verinin ham haliyle kullanılması yerine, stats veriyi özetleyerek dönüştürmektedir. Örneğin histogramda yoğunluk tahmini gibi işlemleri içermektedir.
 
 **6. Koordinat Sistemi (Coordinates):** Verinin nasıl düzenleneceğini tanımlamaktadır (kartezyen, polar en sık kullanılanlardır.)
 
-Kartezyen koordinat sistemi: X ve Y eksenlerinin dik açılarla kesiştiği geleneksel koordinat sistemi olup; dağılım,,çubuk gibi pek çok grafik bu sistemi kullanmaktadır. coord_cartesian()
+*Kartezyen koordinat sistemi:* X ve Y eksenlerinin dik açılarla kesiştiği geleneksel koordinat sistemi olup; dağılım, çubuk gibi pek çok grafik bu sistemi kullanmaktadır. coord_cartesian()
 
-Polar koordinat sistemi: dairesel bir düzenleme kullanmaktadır. mesafe (R) ve açı (θ) ile veri temsil edilmektedir. Pasta ya da radar grafikler bu sistemle oluşturulmaktadır. coord_polar()
+*Polar koordinat sistemi:* dairesel bir düzenleme kullanmaktadır. mesafe (R) ve açı (θ) ile veri temsil edilmektedir. Pasta ya da radar grafikler bu sistemle oluşturulmaktadır. coord_polar()
 
 **7. Fasetleme (Facets):** Veriyi alt gruplara bölerek biren fazla grafik oluşturmaktadır. facet_wrap(\~şehir) ile her şehir için ayrı bir grafik oluşturulur.
 
-**8. Tema ve Düzen (Themes):** Görsel ve stil etiketleri özelleştirir. Font, arka plan, etiketler gibi görsel stilleri ve düzeni özelleştirmektedir. theme_minimal()
-
-**9. Etiketler:** Başlık eksen adı ve açıklamaların atanmasını sağlamaktadır. labs(title = "Yaş ve Gelir İlişkisi", x = "Yaş", y = "Gelir (TL)") gibi.
+**8. Tema ve Düzen (Themes):** Görsel ve stil etiketleri özelleştirir. Başlık, font, arka plan, etiketler, açıklamalar gibi görsel stilleri ve düzeni özelleştirmektedir. labs(title = "Yaş ve Gelir İlişkisi", x = "Yaş", y = "Gelir (TL)") gibi.
 
 theme_minimal()
 
@@ -350,10 +348,12 @@ Bu bileşenler birbiriyle katmanlar halinde birleşerek grafiği oluşturmaktad�
 
 Grafiklerin oluşturulabilmesi için öncelikle verinin içeri aktarılması gerekmektedir.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(ggplot2)   # Grafikler için
 
 data <- read.csv("ggplotverisi.csv")
+
+head(data)
 ```
 
 Yukarıdaki şekilde veri içeri aktarıldıktan ve ggplot2 paketi çağırıldıktan sonra çeşitli grafiklerin oluşturulması mümkün olmaktadır.
@@ -380,7 +380,7 @@ Grafik veri setindeki bireylerin yaşları nasıl dağılmış, hangi yaş grubu
 
 Histogram grafiğine yoğunluk eğrisi eklenmesi de mümkün olmaktadır. Bu aşağıdaki kkodlar ile gerçekleştirilebilmektedir.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 ggplot(data, aes(x = yas)) +
   geom_histogram(aes(y = ..density..),    # Histogram yogunluk (density) olceginde
                  binwidth = 5,
@@ -399,7 +399,7 @@ Aşağıda cinsiyete göre kişi sayısını gösteren çubuk grafik oluşturulm
 
 **aes(x = cinsiyet)** ile kategorik bir değişken olan cinsiyet x eksenine yerleştirilmektedir.
 
-**geom_bar():** her cinsiyet içi otomati olarak kisi sayısını (frekansı) sayarak çubuk olarak göstermektedir.
+**geom_bar():** her cinsiyet için otomatik olarak kisi sayısını (frekansı) sayarak çubuk olarak göstermektedir.
 
 **fill = "orange"** çubukların içini turuncu yapmaktadır.
 

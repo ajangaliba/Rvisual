@@ -165,8 +165,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Verilerin Görselleştirilmesi</h1>
 <section id="tarihçe" class="level2">
 <h2 class="anchored" data-anchor-id="tarihçe">Tarihçe</h2>
-<p>Veri görselleştirme yöntemleri yüzyıllardır kullanılmaktadır. 18. yy’da yaşamış olan İskoç mühendis William Playfair çubuk grafik, çizgi grafikk ve pasta grafiklerin öncüsü olmuştur. 19. yüzyılda da Florence Nightingale savaş zamanlarındaki sağlık koşullarını göstermek için “gül diyagramı”nı kullanmıştır.</p>
-<p>20.nci yüzyılda ise bilgisayarlar gelişmiş ve veri görselleştirme hızlı bir ilerleme kaydetmiştir. 21. yüzyılda iseinteraktif görseller, büyük veri, yapay zeka ile birlikte bu alan daha önemli hale gelmiştir.</p>
+<p>Veri görselleştirme yöntemleri yüzyıllardır kullanılmaktadır. 18. yy’da yaşamış olan İskoç mühendis William Playfair çubuk grafik, çizgi grafik ve pasta grafiklerin öncüsü olmuştur. 19. yüzyılda da Florence Nightingale savaş zamanlarındaki sağlık koşullarını göstermek için “gül diyagramı”nı kullanmıştır.</p>
+<p>20.nci yüzyılda ise bilgisayarlar gelişmiş ve veri görselleştirme hızlı bir ilerleme kaydetmiştir. 21. yüzyılda ise interaktif görseller, büyük veri, yapay zeka ile birlikte bu alan daha önemli hale gelmiştir.</p>
 </section>
 <section id="neden-önemlidir" class="level2">
 <h2 class="anchored" data-anchor-id="neden-önemlidir">Neden Önemlidir?</h2>
@@ -216,12 +216,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="grafik---veri-türü-eşleşmeleri" class="level3">
 <h3 class="anchored" data-anchor-id="grafik---veri-türü-eşleşmeleri">Grafik - Veri Türü Eşleşmeleri</h3>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "LC_COLLATE=Turkish_Türkiye.1254;LC_CTYPE=Turkish_Türkiye.1254;LC_MONETARY=Turkish_Türkiye.1254;LC_NUMERIC=C;LC_TIME=Turkish_Türkiye.1254"</code></pre>
-</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Hangi Tur Veri ile Ne Tip Gorsel Kullanilir?</caption>
+<caption>Hangi Tür Veri ile Ne Tip Görsel Kullanılır?</caption>
 <colgroup>
 <col style="width: 12%">
 <col style="width: 23%">
@@ -241,52 +238,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Histogram</td>
-<td style="text-align: left;">yas veya gelir</td>
-<td style="text-align: left;">Surekli (sayısal)</td>
-<td style="text-align: left;">Tek degiskenli</td>
-<td style="text-align: left;">Surekli bir degisenin dagilimini gosterir</td>
+<td style="text-align: left;">yaş veya gelir</td>
+<td style="text-align: left;">Sürekli (sayısal)</td>
+<td style="text-align: left;">Tek değişkenli</td>
+<td style="text-align: left;">Sürekli bir değişenin dağılımını gösterir</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cubuk Grafik</td>
-<td style="text-align: left;">cinsiyet, sehir, calisiyor</td>
+<td style="text-align: left;">Çubuk Grafik</td>
+<td style="text-align: left;">cinsiyet, şehir, çalışıyor</td>
 <td style="text-align: left;">Kesikli / Kategorik</td>
-<td style="text-align: left;">Tek degiskenli</td>
-<td style="text-align: left;">Kategorik degiskenin frekans dagilimi</td>
+<td style="text-align: left;">Tek değişkenli</td>
+<td style="text-align: left;">Kategorik değişkenin frekans dağılımı</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Pasta Grafigi</td>
-<td style="text-align: left;">cinsiyet, sehir</td>
+<td style="text-align: left;">Pasta Grafiği</td>
+<td style="text-align: left;">cinsiyet, şehir</td>
 <td style="text-align: left;">Kategorik</td>
-<td style="text-align: left;">Tek degiskenli</td>
-<td style="text-align: left;">Gruplarin oransal dagilimi</td>
+<td style="text-align: left;">Tek değişkenli</td>
+<td style="text-align: left;">Gruplarin oransal dağılımı</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Kutu Grafigi</td>
-<td style="text-align: left;">gelir ~ cinsiyet veya gelir ~ sehir</td>
+<td style="text-align: left;">Kutu Grafiği</td>
+<td style="text-align: left;">gelir ~ cinsiyet veya gelir ~ şehir</td>
 <td style="text-align: left;">Sayisal + Kategorik</td>
-<td style="text-align: left;">İki degiskenli</td>
-<td style="text-align: left;">Gruplara gore dagilim ve aykiri degerler</td>
+<td style="text-align: left;">İki değişkenli</td>
+<td style="text-align: left;">Gruplara göre dağılım ve aykırı değerler</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Nokta Grafigi</td>
-<td style="text-align: left;">yas ve gelir</td>
-<td style="text-align: left;">Sürekli (iki sayisal degisken)</td>
-<td style="text-align: left;">İki degiskenli</td>
-<td style="text-align: left;">Degiskenler arasi iliskiyi gosterir</td>
+<td style="text-align: left;">Nokta Grafiği</td>
+<td style="text-align: left;">yaş ve gelir</td>
+<td style="text-align: left;">Sürekli (iki sayısal degişken)</td>
+<td style="text-align: left;">İki değişkenli</td>
+<td style="text-align: left;">Değişkenler arası ilişkiyi gösterir</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Çizgi Grafigi</td>
+<td style="text-align: left;">Çizgi Grafiği</td>
 <td style="text-align: left;">ay (zaman) ve gelir</td>
-<td style="text-align: left;">Zaman (kesikli) + Sayisal</td>
-<td style="text-align: left;">İki degiskenli</td>
-<td style="text-align: left;">Zamana bagli degisim</td>
+<td style="text-align: left;">Zaman (kesikli) + Sayısal</td>
+<td style="text-align: left;">İki değişkenli</td>
+<td style="text-align: left;">Zamana bağlı değişim</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Facet (Alt grafik)</td>
-<td style="text-align: left;">gelir ~ yas, facet_wrap(~ sehir)</td>
-<td style="text-align: left;">Sayisal + Kategorik (alt grafik icin)</td>
-<td style="text-align: left;">Cok degiskenli</td>
-<td style="text-align: left;">Her kategori icin ayri grafikler</td>
+<td style="text-align: left;">gelir ~ yaş, facet_wrap(~ şehir)</td>
+<td style="text-align: left;">Sayısal + Kategorik (alt grafik için)</td>
+<td style="text-align: left;">Çok değişkenli</td>
+<td style="text-align: left;">Her kategori için ayrı grafikler</td>
 </tr>
 </tbody>
 </table>
@@ -299,8 +296,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Veriler görselleştrilirken oluşturulan grafiğin doğru anlaşılabilmesi amacıyla <strong>eksenler</strong> (x ve y) ve bu eksenlere ait <strong>etiketler</strong> (açıklayıcı metinler) büyük önem taşımaktadır.</p>
 <p><strong>Eksenler:</strong> veri değerlerinin nerede konumlandığını gösterirken</p>
 <p><strong>Etiketler:</strong> neyin neye karşı çizildiğini anlatmaktadır</p>
-<p>X ekseninde genellikle bağımsız değişken yer alır. Bağımsız değişken bir deneye veya analizde diğer değişkenleri etkilediği düşünülen, araştırmacı tarafından kontrol /manipüle edilen değişkendir. Daha basit bir şekilde ifade etmek gerekirse “neden” ya da “etki yaratan” değişken denilebilir..</p>
-<p>Y ekseninde isew genellikle bağımlı değişken bulunmaktadır. Bağımlı değişken bir deney/analizde bağımsız değişkenin etkisi ile değiştiği düşünülen ve ölçülen değişkendir. Basitçe “sonuç”, ya da “etkilenen” değişken olarak görülebilir.</p>
+<p>X ekseninde genellikle bağımsız değişken yer alır. Bağımsız değişken bir deneye veya analizde diğer değişkenleri etkilediği düşünülen, araştırmacı tarafından kontrol /manipüle edilen değişkendir. Daha basit bir şekilde ifade etmek gerekirse “neden” ya da “etki yaratan” değişken denilebilir.</p>
+<p>Y ekseninde ise genellikle bağımlı değişken bulunmaktadır. Bağımlı değişken bir deney/analizde bağımsız değişkenin etkisi ile değiştiği düşünülen ve ölçülen değişkendir. Basitçe “sonuç”, ya da “etkilenen” değişken olarak görülebilir.</p>
 <p><strong>Örneğin</strong> sulama miktarının bir bitkinin büyüme hızına etkisi araştırılıyorsa;</p>
 <ul>
 <li><p><em>Bağımsız Değişken:</em> Sulama miktarı (örn; 500ml, 1000ml)</p></li>
@@ -330,11 +327,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="örnek-veri-seti-ile-grafik-türlerinin-uygulanması">Örnek Veri Seti ile Grafik Türlerinin Uygulanması</h2>
 <p>Bu bölümde gerçek hayatta karşılaşabileceğimiz türden, yapay bir veri seti olan gelir_calisma kullanılarak farklı grafik türlerinin nasıl oluşturulduğu gösterilecektir. Veri setinin R’a yüklenmesi için gerekli kodlar aşağıda verilmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"gelir_calisma.csv"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># veri</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(veri) <span class="co"># veri setinin ilk 5 satırını göstermek için kullanılmıştır. yalnızca veri yazılarak çalıştırılsaydı, R tüm veri setini gösterebilirdi. Burada veri yapısını kısaca görmek amacıyla kullnaılmıştır head fonksiyonu.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>veri <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"gelir_calisma.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># veri</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(veri) <span class="co"># veri setinin ilk 5 satırını göstermek için kullanılmıştır. yalnızca veri yazılarak çalıştırılsaydı, R tüm veri setini gösterebilirdi. Burada veri yapısını kısaca görmek amacıyla kullnaılmıştır head fonksiyonu.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   isim yas    gelir calisma_durumu cinsiyet
 1 kisi1  44 50020.54           TRUE    Kadin
@@ -361,12 +358,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Çubuk grafik, görsel olarak histogram grafiğine benzer bir grafiktir. Ancak histogramda çubuklar birbirine bitişik oluşmaktadır. Sayısal verilerin sıklık dağılımını görselleştirmektedir. R2da histogram grafiği oluşturmak için “hist” fonksiyopnu kullanılmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Yaşların Dağılımı</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(veri<span class="sc">$</span>yas,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaşların Dağılımı"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Yaşların Dağılımı</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(veri<span class="sc">$</span>yas,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaşların Dağılımı"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -375,18 +372,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Ayrıca bu histogram grafiğine yoğunluk eğrisi eklenmesi aşağıdaki şekilde mümkün olmaktadır. Burada freq = FALSE ile histogram çubuklarının yüksekliği kişi sayısını değil yoğunluğu ifade etmeye başlarken, lines(density(…)) fonksiyonu ise histogram üzerine bir yoğunluk eğrisi çizmektedir.</p>
+<p>Ayrıca bu histogram grafiğine yoğunluk eğrisi eklenmesi aşağıdaki şekilde mümkün olmaktadır. Burada <strong>freq = FALSE</strong> ile histogram çubuklarının yüksekliği kişi sayısını değil yoğunluğu ifade etmeye başlarken, <strong>lines(density(…))</strong> fonksiyonu ise histogram üzerine bir yoğunluk eğrisi çizmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(veri<span class="sc">$</span>yas,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaşların Dağılımı"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Yoğunluk"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">freq =</span> <span class="cn">FALSE</span>)  <span class="co"># Sayı yerine yoğunluk</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(veri<span class="sc">$</span>yas), </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">col =</span> <span class="st">"darkblue"</span>, </span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">lwd =</span> <span class="dv">2</span>)  <span class="co"># Yoğunluk eğrisi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(veri<span class="sc">$</span>yas,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaşların Dağılımı"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Yoğunluk"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">freq =</span> <span class="cn">FALSE</span>)  <span class="co"># Sayı yerine yoğunluk</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(veri<span class="sc">$</span>yas), </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">col =</span> <span class="st">"darkblue"</span>, </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">lwd =</span> <span class="dv">2</span>)  <span class="co"># Yoğunluk eğrisi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -410,10 +407,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>R’da boxplot grafiği oluşturmak için “boxplot” fonksiyonu kullanılmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(veri<span class="sc">$</span>gelir,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Gelir Dağılımı"</span>,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">"salmon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(veri<span class="sc">$</span>gelir,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Gelir Dağılımı"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">"salmon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -423,14 +420,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>Not:</strong> grafikteki alt çizgi min, kutunun alt sınırı q1, ortadaki siyah çizgi medyan, kutunun üst sınırı q3, üst çizgi max değeri ifade etmektedir.</p>
-<p>Histogram grafiği verilierin sıklık dağılımını gösterir, grupları karşılaştırmak zordur. Ancak boxplot verilerin özet istatistiklerini gösterir ve grupları karşılaştırmak içn daha uygundur. Eğer veride aykırı bir değer bulunursa aykırı değerleri temsil eden noktalar oluşmaktadır.</p>
-<p>Grupların karşılaştırılmasına örnek olarak ise cinsiyete göre gelir dağılımı grafiği verilebilir. Aşağıda una örnek bir grafiğin nasıl oluşturulacağı gösterilmektedir.</p>
+<p><em>Histogram grafiği</em> verilierin sıklık dağılımını gösterir, grupları karşılaştırmak zordur. Ancak <em>boxplot</em> verilerin özet istatistiklerini gösterir ve grupları karşılaştırmak için daha uygundur. Eğer veride aykırı bir değer bulunursa aykırı değerleri temsil eden noktalar oluşmaktadır.</p>
+<p>Grupların karşılaştırılmasına örnek olarak ise cinsiyete göre gelir dağılımı grafiği verilebilir. Aşağıda buna örnek bir grafiğin nasıl oluşturulacağı gösterilmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(gelir <span class="sc">~</span> cinsiyet,</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> veri,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Gore Gelir Dagilimi"</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"pink"</span>, <span class="st">"lightblue"</span>, <span class="st">"gray"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(gelir <span class="sc">~</span> cinsiyet,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> veri,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Gore Gelir Dagilimi"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"gray"</span>, <span class="st">"lightblue"</span>, <span class="st">"pink"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -447,18 +444,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>X - Ekseni kategorik verileri göstermektedir. (örn: şehirler, gruplar)</li>
 <li>Y - Ekseni her kategoriye ait sayısal değeri göstermektedir. (frekans, toplam, ortalama vb)</li>
-<li>Çubuklar histogramdan farklı şşekilde aralıklı oluşmaktadır.</li>
+<li>Çubuklar histogramdan farklı şekilde aralıklı oluşmaktadır.</li>
 <li>Kategorik verilerin karşılaştırılmasını kolaylaştırmayı amaçlamaktadır.</li>
 </ol>
 <p>R’da çubuk grafiği çizmek için “barplot” fonksiyonu kullanılmaktadır.</p>
 <p>Aşağıda Cinsiyete Göre kişi sayısını gösteren çubuk grafiğin oluşturulmasına yönelik kodlar bulunmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>table_cinsiyet <span class="ot">&lt;-</span> <span class="fu">table</span>(veri<span class="sc">$</span>cinsiyet) <span class="co"># bu fonksiyon her kategoride kaç gözlem olduğunu saymaktadır.</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_cinsiyet,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"pink"</span>, <span class="st">"skyblue"</span>, <span class="st">"lightgray"</span>),</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Cinsiyet"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>table_cinsiyet <span class="ot">&lt;-</span> <span class="fu">table</span>(veri<span class="sc">$</span>cinsiyet) <span class="co"># bu fonksiyon her kategoride kaç gözlem olduğunu saymaktadır.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(table_cinsiyet,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"lightgray"</span>, <span class="st">"skyblue"</span>, <span class="st">"pink"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Cinsiyet"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -473,12 +470,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Dağılım grafiği iki nicel değişken arasındaki ilişkiyi ve yayılımı analiz etmek için kullanılan bir analiz türüdür. X ekseni bağımsız değişkeni Y ekseni ise bağımlı değişkeni temsişl etmektedir. Her veri noktası bu iki değişken in bir kombinasyonunu göstermektedir. Bu grafikler eğilimleri (pozitif ya da negatif korelasyon) ve aykırı değerleri tespit etmek için idealdir.</p>
 <p>Aşağıda veri setinde bulunan yaş ve gelir verilerinin arasındaki ilişkiyi gösterir scatter plot örneği bulunmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(veri<span class="sc">$</span>yas, veri<span class="sc">$</span>gelir,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(veri<span class="sc">$</span>yas, veri<span class="sc">$</span>gelir,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -489,16 +486,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Bu grafiğe eğilim çizgisi eklenmesi de aşağıdaki şekilde mümkün olmaktadır,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(veri<span class="sc">$</span>yas, veri<span class="sc">$</span>gelir,</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>,</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>,</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(gelir <span class="sc">~</span> yas, <span class="at">data =</span> veri)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(veri<span class="sc">$</span>yas, veri<span class="sc">$</span>gelir,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Gelir (TL)"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(gelir <span class="sc">~</span> yas, <span class="at">data =</span> veri)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -514,21 +511,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>ggplot2 ile Verilerin Görselleştirilmesi</h1>
 <section id="grammer-of-graphics-grafik-dili" class="level2">
 <h2 class="anchored" data-anchor-id="grammer-of-graphics-grafik-dili">Grammer of Graphics (Grafik Dili)</h2>
-<p>Grafik Dili (Grammer of Graphics) veri görselleştirmesini sistematik ve modüler şekilde tanımlayan bir kavramsal çerçeve olup ilk olarak 1999 yılında Leland Wikinson tarafından yayınlanan <em>The Grammer of Graphics</em> kitabında tanıtılmıştır. ggplot2 gibi modern veri görselleştirme araşlarının temelini oluşturmaktadırç</p>
+<p>Grafik Dili (Grammer of Graphics) veri görselleştirmesini sistematik ve modüler şekilde tanımlayan bir kavramsal çerçeve olup ilk olarak 1999 yılında Leland Wikinson tarafından yayınlanan <em>The Grammer of Graphics</em> kitabında tanıtılmıştır. ggplot2 gibi modern veri görselleştirme araçlarının temelini oluşturmaktadır.</p>
 <section id="temel-kavramlar" class="level3">
 <h3 class="anchored" data-anchor-id="temel-kavramlar">Temel Kavramlar</h3>
 <p>Grafik dili bir grafiği oluşturan temel bileşenleri bir “dil” gibi ele almaktadır. Bu bileşenler aşağıda sıralanmaktadır;</p>
 <p><strong>1. Veri (Data):</strong> Görselleştirilecek ham verilerdir. (data = veri)</p>
 <p><strong>2. Değişken Atamaları (Mappings):</strong> Verinin grafik öğelerinin nasıl eşleneceğini tanımlamaktadır. (x - ekseni, y - ekseni, renk vb.) (aes(x = yaş, y = gelir, color = şehir) ile yaş x-eksenine, gelir y-eksenine, şehir ise renge atanır.)</p>
-<p><strong>3. Geometrik Nesneler (Geoms):</strong> Veriyi görselleştirmek için kullanılan şekiller( örneğin çubuklar, noktalar, çizgiler) (geom_point() dağılım grafiği, geom_line() çizgi grafiği oluşturur.) Mappings veriyi nasıl görsel olarak temsik edeceğini belirlerken geoms görselleştirmenin “şeklini” oluşturmaktadır.</p>
-<p><strong>4. Estetik Özellikler:</strong> Görsel özellikleri ( renk, boyut, şekil) belirler ve değişkenlerle ilişkilendirir. ( örneğin bir değişkeni renge bağlayarak farklı kategorileri ayırt etmeyi sağlar. aes(color = sehir) yazılırsa her şehir farklı renkte gösterilebilmektedir.)</p>
-<p><strong>5. İstatistiksel Dönüşümler (Stats):</strong> Veriye uygulanan özetlemeler veya dönüşümler (örn; ortalama, yoğunluık tahmini) ( stat_summary() ile ehr grup için ortalama hesaplanabilmektedir. Verinin ham haliyle kullanılması yerine, stats veriyi özetleyerek dönüştürmektedir. Örneğin histogramda yoğunluk tahmini gibi işlemleri içermektedir.</p>
+<p><strong>3. Geometrik Nesneler (Geoms):</strong> Veriyi görselleştirmek için kullanılan şekiller( örneğin çubuklar, noktalar, çizgiler) (geom_point() dağılım grafiği, geom_line() çizgi grafiği oluşturur.) Mappings veriyi nasıl görsel olarak temsil edeceğini belirlerken geoms görselleştirmenin “şeklini” oluşturmaktadır.</p>
+<p><strong>4. Estetik Özellikler:</strong> Görsel özellikleri (renk, boyut, şekil) belirler ve değişkenlerle ilişkilendirir. (örneğin bir değişkeni renge bağlayarak farklı kategorileri ayırt etmeyi sağlar. aes(color = sehir) yazılırsa her şehir farklı renkte gösterilebilmektedir.)</p>
+<p><strong>5. İstatistiksel Dönüşümler (Stats):</strong> Veriye uygulanan özetlemeler veya dönüşümler (örn; ortalama, yoğunluık tahmini) ( stat_summary() ile her grup için ortalama hesaplanabilmektedir. Verinin ham haliyle kullanılması yerine, stats veriyi özetleyerek dönüştürmektedir. Örneğin histogramda yoğunluk tahmini gibi işlemleri içermektedir.</p>
 <p><strong>6. Koordinat Sistemi (Coordinates):</strong> Verinin nasıl düzenleneceğini tanımlamaktadır (kartezyen, polar en sık kullanılanlardır.)</p>
-<p>Kartezyen koordinat sistemi: X ve Y eksenlerinin dik açılarla kesiştiği geleneksel koordinat sistemi olup; dağılım,,çubuk gibi pek çok grafik bu sistemi kullanmaktadır. coord_cartesian()</p>
-<p>Polar koordinat sistemi: dairesel bir düzenleme kullanmaktadır. mesafe (R) ve açı (θ) ile veri temsil edilmektedir. Pasta ya da radar grafikler bu sistemle oluşturulmaktadır. coord_polar()</p>
+<p><em>Kartezyen koordinat sistemi:</em> X ve Y eksenlerinin dik açılarla kesiştiği geleneksel koordinat sistemi olup; dağılım, çubuk gibi pek çok grafik bu sistemi kullanmaktadır. coord_cartesian()</p>
+<p><em>Polar koordinat sistemi:</em> dairesel bir düzenleme kullanmaktadır. mesafe (R) ve açı (θ) ile veri temsil edilmektedir. Pasta ya da radar grafikler bu sistemle oluşturulmaktadır. coord_polar()</p>
 <p><strong>7. Fasetleme (Facets):</strong> Veriyi alt gruplara bölerek biren fazla grafik oluşturmaktadır. facet_wrap(~şehir) ile her şehir için ayrı bir grafik oluşturulur.</p>
-<p><strong>8. Tema ve Düzen (Themes):</strong> Görsel ve stil etiketleri özelleştirir. Font, arka plan, etiketler gibi görsel stilleri ve düzeni özelleştirmektedir. theme_minimal()</p>
-<p><strong>9. Etiketler:</strong> Başlık eksen adı ve açıklamaların atanmasını sağlamaktadır. labs(title = “Yaş ve Gelir İlişkisi”, x = “Yaş”, y = “Gelir (TL)”) gibi.</p>
+<p><strong>8. Tema ve Düzen (Themes):</strong> Görsel ve stil etiketleri özelleştirir. Başlık, font, arka plan, etiketler, açıklamalar gibi görsel stilleri ve düzeni özelleştirmektedir. labs(title = “Yaş ve Gelir İlişkisi”, x = “Yaş”, y = “Gelir (TL)”) gibi.</p>
 <p>theme_minimal()</p>
 <p>Bu bileşenler birbiriyle katmanlar halinde birleşerek grafiği oluşturmaktadır.</p>
 </section>
@@ -537,11 +533,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="ggplot2-ile-örnek-grafikler">ggplot2 ile Örnek Grafikler</h2>
 <p>Grafiklerin oluşturulabilmesi için öncelikle verinin içeri aktarılması gerekmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)   <span class="co"># Grafikler için</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)   <span class="co"># Grafikler için</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"ggplotverisi.csv"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   isim yas    gelir cinsiyet calisiyor    sehir  yil
+1 kisi1  48 46940.37    Kadin      Evet   Ankara 2020
+2 kisi2  32 46195.29    Erkek      Evet  Antalya 2024
+3 kisi3  31 43052.93    Kadin     Hayir Istanbul 2025
+4 kisi4  20 47920.83    Erkek      Evet  Antalya 2025
+5 kisi5  59 37346.04    Erkek     Hayir Istanbul 2020
+6 kisi6  60 71689.56    Erkek     Hayir    Bursa 2023</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"ggplotverisi.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Yukarıdaki şekilde veri içeri aktarıldıktan ve ggplot2 paketi çağırıldıktan sonra çeşitli grafiklerin oluşturulması mümkün olmaktadır.</p>
 <section id="histogram-grafiği" class="level3">
@@ -552,9 +557,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>color = “black”</strong> çubukların kenar çizgisini siyah yapmaktadır.</p>
 <p><strong>labs(…)</strong> kısmı başlık x ve y eksenlerini tanımlamaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"skyblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"skyblue"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -566,24 +571,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Grafik veri setindeki bireylerin yaşları nasıl dağılmış, hangi yaş grubu daha sık sorularına cevap vermektedir.</p>
 <p>Histogram grafiğine yoğunluk eğrisi eklenmesi de mümkün olmaktadır. Bu aşağıdaki kkodlar ile gerçekleştirilebilmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..),    <span class="co"># Histogram yogunluk (density) olceginde</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">5</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"skyblue"</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> <span class="st">"black"</span>,</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>  <span class="co"># Yogunluk eğrisi</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yas Dagılımı ve Yogunluk Egrisi"</span>,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yas"</span>,</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Yogunluk"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-i Please use `linewidth` instead.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
-i Please use `after_stat(density)` instead.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..),    <span class="co"># Histogram yogunluk (density) olceginde</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">5</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"skyblue"</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span>  <span class="co"># Yogunluk eğrisi</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yas Dagılımı ve Yogunluk Egrisi"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yas"</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Yogunluk"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -597,12 +594,12 @@ i Please use `after_stat(density)` instead.</code></pre>
 <h3 class="anchored" data-anchor-id="çubuk-grafik">2. Çubuk Grafik</h3>
 <p>Aşağıda cinsiyete göre kişi sayısını gösteren çubuk grafik oluşturulmaktadır.</p>
 <p><strong>aes(x = cinsiyet)</strong> ile kategorik bir değişken olan cinsiyet x eksenine yerleştirilmektedir.</p>
-<p><strong>geom_bar():</strong> her cinsiyet içi otomati olarak kisi sayısını (frekansı) sayarak çubuk olarak göstermektedir.</p>
+<p><strong>geom_bar():</strong> her cinsiyet için otomatik olarak kisi sayısını (frekansı) sayarak çubuk olarak göstermektedir.</p>
 <p><strong>fill = “orange”</strong> çubukların içini turuncu yapmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet)) <span class="sc">+</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet)) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"orange"</span>) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Dağılım"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Kişi Sayısı"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -620,9 +617,9 @@ i Please use `after_stat(density)` instead.</code></pre>
 <p><strong>geom_boxplot():</strong> her grup için minimum, 1. çeyrek, medyan, 3. çeyrek ve maksimum değerleri göstermektedir.</p>
 <p><strong>fill = “lightgreen”</strong> kutunun renginin açık yeşil olmasını sağlamaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Gelir Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> cinsiyet, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cinsiyete Göre Gelir Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Cinsiyet"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -641,9 +638,9 @@ i Please use `after_stat(density)` instead.</code></pre>
 <p><strong>alpha = 0.7:</strong> noktaların saydamlığını belirlemektedir. (0: şeffaf, 1: opak)</p>
 <p><strong>color = “purple”</strong> noktaların rengini mor yapmaktadır.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -655,9 +652,9 @@ i Please use `after_stat(density)` instead.</code></pre>
 <p>Grafik yaş arttıkça gelir artıyor mu? Arada bir ilişki var mı sorusuna cevap vermeyi amaçlamaktadır.</p>
 <p>Ayrıca grafikteki noktalar mor yerine şehir/cinsiyet gibi değişkenlere göre ayarlanacak şekilde belirlenebilmektedir. bunun için color =“purple” kısmı silinerek aes kısmına col = sehir, ya da col = cinsiyet parametresi eklenebilmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir, <span class="at">col =</span> sehir)) <span class="sc">+</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir, <span class="at">col =</span> sehir)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -668,12 +665,12 @@ i Please use `after_stat(density)` instead.</code></pre>
 </div>
 <p>Bu garfiğin eğilimini göstermek için aşağıdaki kodların eklenmesi yeterli olacaktır:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span>    <span class="co"># Noktalar</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span>  <span class="co"># Eğilim çizgisi (linear model)</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi (Eğim Çizgisi ile)"</span>,</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yaş"</span>,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas, <span class="at">y =</span> gelir)) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span>    <span class="co"># Noktalar</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span>  <span class="co"># Eğilim çizgisi (linear model)</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yaş ve Gelir İlişkisi (Eğim Çizgisi ile)"</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Yaş"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Gelir"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -698,17 +695,17 @@ i Please use `after_stat(density)` instead.</code></pre>
 <p><strong>geom_point()</strong> çizgi üzerindeki her nokta verideki alınan ortalama değeri temsil etmektedir.</p>
 <p><strong>group = 1</strong> tek bir çizgi çizeceğini belirtmektedir (ÖNEMLİ !!)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>veri_yillik <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yil) <span class="sc">%&gt;%</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">ortalama_gelir =</span> <span class="fu">mean</span>(gelir, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(veri_yillik, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> ortalama_gelir)) <span class="sc">+</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">group =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>) <span class="sc">+</span>  <span class="co"># Yılları tam sayı olarak ayarla</span></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yıla Göre Ortalama Gelir"</span>, <span class="at">x =</span> <span class="st">"Yıl"</span>, <span class="at">y =</span> <span class="st">"Ortalama Gelir (TL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>veri_yillik <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yil) <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">ortalama_gelir =</span> <span class="fu">mean</span>(gelir, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(veri_yillik, <span class="fu">aes</span>(<span class="at">x =</span> yil, <span class="at">y =</span> ortalama_gelir)) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">group =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>) <span class="sc">+</span>  <span class="co"># Yılları tam sayı olarak ayarla</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Yıla Göre Ortalama Gelir"</span>, <span class="at">x =</span> <span class="st">"Yıl"</span>, <span class="at">y =</span> <span class="st">"Ortalama Gelir (TL)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -725,10 +722,10 @@ i Please use `after_stat(density)` instead.</code></pre>
 <p><strong>facet_wrap(~ sehir)</strong> her şehir için ayrı bir küçük histogram çizmektedir. (facias)</p>
 <p><strong>bindwidth = 5</strong> 5 yaş aralıklı histogram çizmektedir.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"lightcoral"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> sehir) <span class="sc">+</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Şehirlere Göre Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> yas)) <span class="sc">+</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"lightcoral"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> sehir) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Şehirlere Göre Yaş Dağılımı"</span>, <span class="at">x =</span> <span class="st">"Yaş"</span>, <span class="at">y =</span> <span class="st">"Frekans"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
