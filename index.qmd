@@ -52,7 +52,7 @@ Uygun Grafik;
 
 ### Zamana Bağlı Veriler (Zaman Serileri)
 
-Zaman içinde değişen veriler için kullanılmakatdır.
+Zaman içinde değişen veriler için kullanılmaktadır.
 
 Uygun Grafik;
 
