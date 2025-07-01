@@ -199,6 +199,21 @@ hist(veri$yas,
      ylab = "Kişi Sayısı")
 ```
 
+Ayrıca bu histogram grafiğine yoğunluk eğrisi eklenmesi aşağıdaki şekilde mümkün olmaktadır. Burada freq = FALSE ile histogram çubuklarının yüksekliği kişi sayısını değil yoğunluğu ifade etmeye başlarken, lines(density(...)) fonksiyonu ise histogram üzerine bir yoğunluk eğrisi çizmektedir.
+
+```{r message=FALSE, warning=FALSE}
+hist(veri$yas,
+     col = "lightblue",
+     main = "Yaşların Dağılımı",
+     xlab = "Yaş",
+     ylab = "Yoğunluk",
+     freq = FALSE)  # Sayı yerine yoğunluk
+
+lines(density(veri$yas), 
+      col = "darkblue", 
+      lwd = 2)  # Yoğunluk eğrisi
+```
+
 \-- Veri setindeki başka hangi değişken ile histogram grafiği oluşturulabilir?
 
 ### 2. Kutu (Boxplot) Grafiği
@@ -276,6 +291,23 @@ plot(veri$yas, veri$gelir,
      ylab = "Gelir (TL)",
      pch = 19,
      col = "darkblue")
+```
+
+Bu grafiğe eğilim çizgisi eklenmesi de aşağıdaki şekilde mümkün olmaktadır,
+
+```{r message=FALSE, warning=FALSE}
+plot(veri$yas, veri$gelir,
+     main = "Yaş ve Gelir İlişkisi",
+     xlab = "Yaş",
+     ylab = "Gelir (TL)",
+     pch = 19,
+     col = "darkblue")
+
+model <- lm(gelir ~ yas, data = veri)
+
+abline(model, col = "black", lwd = 2)
+
+
 ```
 
 # ggplot2 ile Verilerin Görselleştirilmesi
@@ -416,6 +448,14 @@ ggplot(data, aes(x = yas, y = gelir)) +
 ```
 
 Grafik yaş arttıkça gelir artıyor mu? Arada bir ilişki var mı sorusuna cevap vermeyi amaçlamaktadır.
+
+Ayrıca grafikteki noktalar mor yerine şehir/cinsiyet gibi değişkenlere göre ayarlanacak şekilde belirlenebilmektedir. bunun için color ="purple" kısmı silinerek aes kısmına col = sehir, ya da col = cinsiyet parametresi eklenebilmektedir.
+
+```{r}
+ggplot(data, aes(x = yas, y = gelir, col = sehir)) +
+  geom_point(alpha = 0.7) +
+  labs(title = "Yaş ve Gelir İlişkisi", x = "Yaş", y = "Gelir")
+```
 
 Bu garfiğin eğilimini göstermek için aşağıdaki kodların eklenmesi yeterli olacaktır:
 
