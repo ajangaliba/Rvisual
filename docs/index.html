@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,8 +137,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">İçindekiler</h2>
+   
+  <ul>
+  <li><a href="#verilerin-görselleştirilmesi" id="toc-verilerin-görselleştirilmesi" class="nav-link active" data-scroll-target="#verilerin-görselleştirilmesi">Verilerin Görselleştirilmesi</a>
+  <ul class="collapse">
+  <li><a href="#tarihçe" id="toc-tarihçe" class="nav-link" data-scroll-target="#tarihçe">Tarihçe</a></li>
+  <li><a href="#neden-önemlidir" id="toc-neden-önemlidir" class="nav-link" data-scroll-target="#neden-önemlidir">Neden Önemlidir?</a></li>
+  <li><a href="#hangi-veri-ile-hangi-tip-grafik-kullanılır" id="toc-hangi-veri-ile-hangi-tip-grafik-kullanılır" class="nav-link" data-scroll-target="#hangi-veri-ile-hangi-tip-grafik-kullanılır">Hangi Veri ile Hangi Tip Grafik Kullanılır?</a>
+  <ul class="collapse">
+  <li><a href="#kategorik-veriler-nitel-veriler" id="toc-kategorik-veriler-nitel-veriler" class="nav-link" data-scroll-target="#kategorik-veriler-nitel-veriler">Kategorik Veriler (Nitel Veriler)</a></li>
+  <li><a href="#sayısal-veriler-nicel-veriler" id="toc-sayısal-veriler-nicel-veriler" class="nav-link" data-scroll-target="#sayısal-veriler-nicel-veriler">Sayısal Veriler (Nicel Veriler)</a></li>
+  <li><a href="#iki-sayısal-değişken-arasındaki-ilişki" id="toc-iki-sayısal-değişken-arasındaki-ilişki" class="nav-link" data-scroll-target="#iki-sayısal-değişken-arasındaki-ilişki">İki Sayısal Değişken Arasındaki İlişki</a></li>
+  <li><a href="#zamana-bağlı-veriler-zaman-serileri" id="toc-zamana-bağlı-veriler-zaman-serileri" class="nav-link" data-scroll-target="#zamana-bağlı-veriler-zaman-serileri">Zamana Bağlı Veriler (Zaman Serileri)</a></li>
+  <li><a href="#grafik---veri-türü-eşleşmeleri" id="toc-grafik---veri-türü-eşleşmeleri" class="nav-link" data-scroll-target="#grafik---veri-türü-eşleşmeleri">Grafik - Veri Türü Eşleşmeleri</a></li>
+  </ul></li>
+  <li><a href="#eksenler-ve-etiketler" id="toc-eksenler-ve-etiketler" class="nav-link" data-scroll-target="#eksenler-ve-etiketler">Eksenler ve Etiketler</a></li>
+  <li><a href="#base-r-ile-verilerin-görselleştirilmesi" id="toc-base-r-ile-verilerin-görselleştirilmesi" class="nav-link" data-scroll-target="#base-r-ile-verilerin-görselleştirilmesi">Base R ile Verilerin Görselleştirilmesi</a></li>
+  <li><a href="#örnek-veri-seti-ile-grafik-türlerinin-uygulanması" id="toc-örnek-veri-seti-ile-grafik-türlerinin-uygulanması" class="nav-link" data-scroll-target="#örnek-veri-seti-ile-grafik-türlerinin-uygulanması">Örnek Veri Seti ile Grafik Türlerinin Uygulanması</a>
+  <ul class="collapse">
+  <li><a href="#histogram-grafiği-oluşturulması" id="toc-histogram-grafiği-oluşturulması" class="nav-link" data-scroll-target="#histogram-grafiği-oluşturulması">1. Histogram Grafiği Oluşturulması</a></li>
+  <li><a href="#kutu-boxplot-grafiği" id="toc-kutu-boxplot-grafiği" class="nav-link" data-scroll-target="#kutu-boxplot-grafiği">2. Kutu (Boxplot) Grafiği</a></li>
+  <li><a href="#çubuk-barplot-grafiği" id="toc-çubuk-barplot-grafiği" class="nav-link" data-scroll-target="#çubuk-barplot-grafiği">3. Çubuk (Barplot) Grafiği</a></li>
+  <li><a href="#dağılım-grafiği-scatter-plot" id="toc-dağılım-grafiği-scatter-plot" class="nav-link" data-scroll-target="#dağılım-grafiği-scatter-plot">4. Dağılım Grafiği (Scatter Plot)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ggplot2-ile-verilerin-görselleştirilmesi" id="toc-ggplot2-ile-verilerin-görselleştirilmesi" class="nav-link" data-scroll-target="#ggplot2-ile-verilerin-görselleştirilmesi">ggplot2 ile Verilerin Görselleştirilmesi</a>
+  <ul class="collapse">
+  <li><a href="#grammer-of-graphics-grafik-dili" id="toc-grammer-of-graphics-grafik-dili" class="nav-link" data-scroll-target="#grammer-of-graphics-grafik-dili">Grammer of Graphics (Grafik Dili)</a>
+  <ul class="collapse">
+  <li><a href="#temel-kavramlar" id="toc-temel-kavramlar" class="nav-link" data-scroll-target="#temel-kavramlar">Temel Kavramlar</a></li>
+  </ul></li>
+  <li><a href="#ggplot2-ile-örnek-grafikler" id="toc-ggplot2-ile-örnek-grafikler" class="nav-link" data-scroll-target="#ggplot2-ile-örnek-grafikler">ggplot2 ile Örnek Grafikler</a>
+  <ul class="collapse">
+  <li><a href="#histogram-grafiği" id="toc-histogram-grafiği" class="nav-link" data-scroll-target="#histogram-grafiği">1.Histogram Grafiği</a></li>
+  <li><a href="#çubuk-grafik" id="toc-çubuk-grafik" class="nav-link" data-scroll-target="#çubuk-grafik">2. Çubuk Grafik</a></li>
+  <li><a href="#kutu-grafiği" id="toc-kutu-grafiği" class="nav-link" data-scroll-target="#kutu-grafiği">3. Kutu Grafiği</a></li>
+  <li><a href="#nokta-grafiği" id="toc-nokta-grafiği" class="nav-link" data-scroll-target="#nokta-grafiği">4. Nokta Grafiği</a></li>
+  <li><a href="#çizgi-grafiği" id="toc-çizgi-grafiği" class="nav-link" data-scroll-target="#çizgi-grafiği">5. Çizgi Grafiği</a></li>
+  <li><a href="#facet" id="toc-facet" class="nav-link" data-scroll-target="#facet">6. Facet</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
