@@ -160,9 +160,26 @@ barplot(y, names.arg = x, main = "Gruplara Gore Ortalama Puan",
 
 ## Örnek Veri Seti ile Grafik Türlerinin Uygulanması
 
-Bu bölümde gerçek hayatta karşılaşabileceğimiz türden, yapay bir veri seti olan gelir_calisma kullanılarak farklı grafik türlerinin nasıl oluşturulduğu gösterilecektir. Veri setinin R'a yüklenmesi için gerekli kodlar aşağıda verilmektedir.
+Bu bölümde gerçek hayatta karşılaşabileceğimiz türden, yapay bir veri seti olan gelir_calisma R'da üretilerek kullanılmıştır. Veri setinin oluşturulması için kullanılan kod, veri setinin bilgisayara kaydedilmesi ve verinin yeniden R'a yüklenmesine ilişkin kodlar aşağıda verilmektedir. Bu veri kullanılarak farklı grafik türlerinin nasıl oluşturulduğu gösterilecektir.
+
+```{r eval = FALSE, message=FALSE, warning=FALSE}
+# verilerin oluşturulması
+set.seed(123)
+
+# Veriyi oluştur
+data <- data.frame(
+  isim = paste0("kisi", 1:60),
+  yas = sample(18:65, 60, replace = TRUE),
+  gelir = round(rnorm(60, mean = 50000, sd = 10000), 2),
+  cinsiyet = sample(c("Kadin", "Erkek"), 60, replace = TRUE),
+  calisiyor = sample(c("Evet", "Hayir"), 60, replace = TRUE)
+)
+# veriyi dosyaya alma
+write.csv(data, "gelir_calisma.csv", row.names = FALSE)
+```
 
 ```{r echo=TRUE}
+
 veri <- read.csv("gelir_calisma.csv")
 
 # veri
@@ -344,11 +361,87 @@ theme_minimal()
 
 Bu bileşenler birbiriyle katmanlar halinde birleşerek grafiği oluşturmaktadır.
 
+Katmanlara ilişkin bir tablo aşağıda sunulmaktadır.
+
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| Öğe (Element)                   | Açıklama                                                                                               | Örnek Kullanım                                                            |
++=================================+========================================================================================================+===========================================================================+
+| **Veri (Data)**                 | Görselleştirmede kullanılacak veri setidir.                                                            | ggplot(data = veri)                                                       |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Estetikler (Aesthetics)**     | Hangi değişkenin grafik üzeriğnde nereye denk geldiğidir. (örn: x ekseni, renk, boyut)                 | ggplot(veri, aes(x = yas, y = gelir))                                     |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Geometriler (Geometrics)**    | Veriyi çizmek için kullanılan şekillerdir. (örn: nokta, çubuk, çizgi)                                  | ggplot(veri, aes(x = yas, y = gelir)) +                                   |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_point()                                                              |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Temalar (Themes)**            | Yazı tipi, arka plan rengi gibi grafik görünümleri süsleyen öğelerdir.                                 | ggplot(veri, aes(x = yas, y = gelir)) +                                   |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_point() +                                                            |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | theme_minimal()                                                           |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **İstatistikler (Statistics)**  | Verileri özetleyen ya da hesaplayan ek bilgilerdir. (örn: ortalama çizgisi, yoğunluk eğrisi)           | ggplot(veri, aes(x = yas, y = gelir)) +                                   |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_point() + \# Noktalar                                                |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_smooth(method = "lm", color = "red") +                               |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | theme_minimal()                                                           |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Koordinatlar (Coordinates)**  | Verilerin grafik üzerinde nasıl yerleşeceğini belirleyen sistemdir. (örn: düz grafik, dairesel grafik) | ggplot(veri, aes(x = yas, y = gelir)) +                                   |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_point() +                                                            |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_smooth(method = "lm", color = "red") +                               |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | coord_cartesian(xlim = c(20, 60), ylim = c(30000, 70000)) +               |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | theme_minimal()                                                           |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | #yaş 20 - 60 yaş arasıda gelir 30000 - 70000 arasında olanlara odaklanır. |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| **Facet'ler (Facets)**          | Veriyi küçük parçalara ayırıp her birimi ayrı grafiklerde göstermektir. (örn: şehir şehir ayrı grafik) | ggplot(veri, aes(x = yas, y = gelir)) +                                   |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_point() +                                                            |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | geom_smooth(method = "lm", color = "red") +                               |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | coord_cartesian(xlim = c(20, 60), ylim = c(30000, 70000)) +               |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | facet_wrap(\~ cinsiyet) +                                                 |
+|                                 |                                                                                                        |                                                                           |
+|                                 |                                                                                                        | theme_minimal()                                                           |
++---------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+
 ## ggplot2 ile Örnek Grafikler
 
-Grafiklerin oluşturulabilmesi için öncelikle verinin içeri aktarılması gerekmektedir.
+Grafiklerin oluşturulabilmesi için öncelikle verinin içeri aktarılması gerekmektedir. Çalışmada kullanılacak yapay veriler, aşağıda verilen kodlar ile yazılarak bilgisayara kaydeddilmekte ve yeniden içeri aktarılmaktadır.
+
+```{r eval = FALSE, message=FALSE, warning=FALSE}
+# verilerin oluşturulması
+
+set.seed(123)
+
+# Yıl isimlerini sıralı şekilde al
+yil_sirasi <- 2020:2025  # 2020 - 2025 yılları
+
+# Veriyi oluştur
+data <- data.frame(
+  isim = paste0("kisi", 1:60),
+  yas = sample(18:65, 60, replace = TRUE),
+  gelir = round(rnorm(60, mean = 50000, sd = 10000), 2),
+  cinsiyet = sample(c("Kadin", "Erkek"), 60, replace = TRUE),
+  calisiyor = sample(c("Evet", "Hayir"), 60, replace = TRUE),
+  sehir = sample(c("Istanbul", "Ankara", "Izmir", "Bursa", "Antalya"), 60, replace = TRUE),
+  yil = factor(sample(yil_sirasi, 60, replace = TRUE), levels = yil_sirasi, ordered = TRUE)
+)
+
+# veriyi dosyaya alma
+write.csv(data, "ggplotverisi.csv", row.names = FALSE)
+```
 
 ```{r message=FALSE, warning=FALSE}
+
 library(ggplot2)   # Grafikler için
 
 data <- read.csv("ggplotverisi.csv")
