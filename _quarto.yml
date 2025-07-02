@@ -8,3 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Anasayfa
+
+format:
+  html:
+    toc: true            # İçindekiler aktif
+    toc-depth: 3          # 3 seviye başlık göster
+    toc-location: left    # Sol tarafta göster
+    toc-title: "İçindekiler"  # Panel başlığı
